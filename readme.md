@@ -1,4 +1,6 @@
-# To deal with "user namespaces are not usable by Bitbake, possibly due to AppArmor", do the following:
+# Notes
+
+## To deal with "user namespaces are not usable by Bitbake, possibly due to AppArmor", do the following
 
 ```
 sudo touch /etc/apparmor.d/bitbake
