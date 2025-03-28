@@ -16,16 +16,28 @@ add the line below to your `conf/local.conf` file
 LICENSE_FLAGS_ACCEPTED = "synaptics-killswitch"
 ```
 
-### To deal with "user namespaces are not usable by Bitbake, possibly due to AppArmor", do the following
+### To deal with "user namespaces are not usable by Bitbake, possibly due to AppArmor", do the following:
 
+Create this file
 ```
 sudo touch /etc/apparmor.d/bitbake
+```
+
+Edit the file, using any editor or just use nano
+```
 sudo nano /etc/apparmor.d/bitbake
+```
+
+Copy-paste or rewrite the lines below into the file
+
+```
 abi <abi/4.0>,
 include <tunables/global>
 profile bitbake /**/bitbake/bin/bitbake flags=(unconfined) {
 userns,
 }
-then, run :
+```
+then, run
+```
 sudo apparmor_parser -r /etc/apparmor.d/bitbake
 ```
