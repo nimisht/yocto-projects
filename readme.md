@@ -37,13 +37,13 @@ profile bitbake /**/bitbake/bin/bitbake flags=(unconfined) {
 userns,
 }
 ```
+then, run
+```
+sudo apparmor_parser -r /etc/apparmor.d/bitbake
+```
 
 if you're still having issues, disable AppArmour entirely as follows:
 
 ```
 echo 0 | sudo tee /proc/sys/kernel/apparmor_restrict_unprivileged_userns
-```
-then, run
-```
-sudo apparmor_parser -r /etc/apparmor.d/bitbake
 ```
