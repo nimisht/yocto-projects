@@ -8,6 +8,10 @@
 sudo apt-get install autoconf automake bzip2 cmake flex g++ gawk gcc gettext git gperf help2man libncurses5-dev libstdc++6 libtool libtool-bin make patch python3-dev rsync texinfo unzip wget xz-utils zstd lz4
 ```
 
+```
+sudo apt install e2fsprogs genext2fs mtd-utils squashfs-tools util-linux
+```
+
 ### Resolving ERROR: Nothing RPROVIDES 'linux-firmware-rpidistro-bcm43455'
 
 add the line below to your `conf/local.conf` file
