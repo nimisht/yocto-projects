@@ -51,3 +51,7 @@ if you're still having issues, disable AppArmour entirely as follows:
 ```
 echo 0 | sudo tee /proc/sys/kernel/apparmor_restrict_unprivileged_userns
 ```
+
+### Mender troubleshooting
+
+To set up the docker demo for Mender server, follow the instructions on this webpage: https://docs.mender.io/server-installation/evaluation-with-docker-compose
